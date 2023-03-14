@@ -23,3 +23,9 @@ updates:
       - "dependencies"
       - "github-actions"
       - "run release CIs"
+
+
+  - package-ecosystem: pip
+    directory: /docs/docsgen/source
+    schedule:
+      interval: daily

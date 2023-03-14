@@ -43,7 +43,7 @@ jobs:
         python -m pip install -q -r requirements-release.txt
 
     - name: Build manylinux2014_x86_64
-      uses: docker://quay.io/pypa/manylinux2014_x86_64
+      uses: docker://quay.io/pypa/manylinux2014_x86_64@sha256:76c734b2ce7fdd4a49788cdf7c1aa3e294dd2dac25266c1b2e78eb17a5dc562f # latest
       with:
         entrypoint: bash
         args: .github/workflows/manylinux/entrypoint.sh ${{ matrix.python-version }} manylinux2014_x86_64 ${{ github.event_name }}
